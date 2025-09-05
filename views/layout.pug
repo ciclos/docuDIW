@@ -1,0 +1,47 @@
+
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='stylesheets/style.css')
+  body
+    <!-- Navbar -->
+    div.container-fluid
+      header.d-flex.flex-wrap.justify-content-center.py-3.mb-4.border-bottom 
+        a(href="/").d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-body-emphasis.text-decoration-none
+          span.fs-4 Apuntes DIW
+        ul.nav.nav-pills
+          li.nav-item
+            a(href="#").nav-link.active Home
+          li.nav-item
+            a(href="#").nav-link Yo
+          li.nav-item
+            a(href="#").nav-link Tu
+    main.container-fluid
+      div.row
+        <!-- Sidebar -->
+        div.col-2
+          ul.list-unstyled.ps-0 
+            li.mb-1 
+              button(data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true").btn.btn-toggle.d-inline-flex.align-items-center.rounded.border-0.collapsed Home
+              div(id="home-collapse").collapse.show 
+                ul.btn-toggle-nav.list-unstyled.fw-normal.pb-1.small 
+                  li 
+                    a( href="#").link-body-emphasis.d-inline-flex.text-decoration-none.rounded Overview 
+                  li 
+                    a( href="#").link-body-emphasis.d-inline-flex.text-decoration-none.rounded Overview 
+                  li 
+                    a( href="#").link-body-emphasis.d-inline-flex.text-decoration-none.rounded Overview 
+            li.mb-1 
+              button(data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true").btn.btn-toggle.d-inline-flex.align-items-center.rounded.border-0.collapsed Home
+              div(id="home-collapse").collapse.show 
+                ul.btn-toggle-nav.list-unstyled.fw-normal.pb-1.small 
+                  li 
+                    a( href="#").link-body-emphasis.d-inline-flex.text-decoration-none.rounded Overview 
+                  li 
+                    a( href="#").link-body-emphasis.d-inline-flex.text-decoration-none.rounded Overview 
+                  li 
+                    a( href="#").link-body-emphasis.d-inline-flex.text-decoration-none.rounded Overview                   
+        block content
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js')
